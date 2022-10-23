@@ -1,0 +1,55 @@
+﻿@model Employee
+
+@{
+    ViewData["Title"] = "Detail";
+}
+
+
+<div class="container-fluid my-3 mx-3">
+    <div class="table-responsive pt-3">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>
+                        Fullname
+                    </th>
+                    <th>
+                        Age
+                    </th>
+                    <th>
+                        Position
+                    </th>
+                    <th>
+                        Online/Offline
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                    <tr>
+                        <td>
+                            @Model.FullName
+                        </td>
+                        <td>
+                            @Model.Age
+                        </td>
+                        <td>
+                            @Model.Position
+                        </td>
+                        <td>
+                            @if (Model.IsActive)
+                            {
+                                <div style="width:30px; height:30px; background-color:green; border-radius:50% "></div>
+                            }
+                            else
+                            {
+
+                                <div style="width:30px; height:30px; background-color:red; border-radius:50% "></div>
+                            }
+
+                        </td>
+                    </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+

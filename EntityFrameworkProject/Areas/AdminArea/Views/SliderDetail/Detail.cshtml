@@ -1,0 +1,37 @@
+﻿@model SliderDetail
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div class="container-fluid my-3 mx-3">
+    <div class="table-responsive pt-3">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>
+                        Title
+                    </th>
+                    <th>
+                        Description
+                    </th>
+                    <th>
+                        Sign image
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        @Html.Raw(Model.Header)
+                    </td>
+                    <td>
+                        @Model.Description
+                    </td>
+                    <td>
+                        <img style="width:197px !important; height:56px !important;" src="~/img/@Model.SignImage" alt="slider" />
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
